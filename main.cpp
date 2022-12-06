@@ -68,8 +68,7 @@ int main (int argc, char* argv[])
     }
     try
     {
-        cv::Mat img_depth=cv::imread(argv[1], cv::IMREAD_ANYCOLOR|cv::IMREAD_ANYDEPTH);
-        // cv::Mat img_depth=cv::imread(argv[1], cv::IMREAD_ANYDEPTH);
+        cv::Mat img_depth=cv::imread(argv[1], cv::IMREAD_UNCHANGED);// cv::IMREAD_ANYCOLOR | cv::IMREAD_ANYDEPTH
         if (img_depth.empty()) {
             std::cout << "failed to load image." << std::endl;
             return 1;
